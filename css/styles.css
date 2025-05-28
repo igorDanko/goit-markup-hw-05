@@ -126,7 +126,6 @@ img {
 
 .current {
   color: var(--color-pressed-state);
-  transition: ;
 }
 
 .current::after {
@@ -479,4 +478,201 @@ img {
 
 .footer-link-icon-list {
   gap: 16px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: #2e2f4266;
+
+  pointer-events: none;
+  opacity: 0;
+}
+
+.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 72px 24px 24px 24px;
+  overflow-y: auto;
+
+  width: 408px;
+
+  background-color: var(--color-modal-background);
+}
+
+.modal-btn-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  stroke: var(--color-dark);
+  fill: var(--color-dark);
+  cursor: pointer;
+  transition: all var(--primary-transition);
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  stroke: var(--color-white-background);
+  fill: var(--color-white-background);
+  background-color: var(--color-pressed-state);
+  border-color: var(--color-pressed-state);
+}
+
+.modal-btn-close-icon {
+}
+
+.modal-text-slogan {
+  margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.modal-form-wrapper {
+  margin-bottom: 8px;
+}
+
+.modal-form-label {
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  color: var(--color-subtle-text);
+}
+
+.modal-from-content {
+  position: relative;
+}
+
+.modal-form-input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #2e2f4266;
+  border-radius: 4px;
+  outline: transparent;
+  padding-left: 38px;
+  cursor: pointer;
+  transition: border-color var(--primary-transition);
+}
+
+.modal-form-input:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.modal-from-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill var(--primary-transition);
+}
+
+.modal-form-input:focus + .modal-from-icon {
+  fill: var(--color-primary-brand);
+}
+
+.modal-massage {
+  padding-top: 8px;
+  padding-left: 16px;
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #2e2f4266;
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--primary-transition);
+  resize: none;
+}
+
+.modal-massage:focus {
+  border-color: var(--color-primary-brand);
+}
+
+.modal-massage::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.modal-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
+.modal-form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  color: var(--color-subtle-text);
+}
+
+.modal-custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2e2f4266;
+  border-radius: 2px;
+  transition: fill var(--primary-transition),
+    background-color var(--primary-transition);
+  fill: transparent;
+}
+
+.modal-custom-checkbox-icon {
+}
+
+.modal-checkbox-input:checked
+  + .modal-form-checkbox-label
+  .modal-custom-checkbox {
+  fill: var(--color-light);
+  stroke: var(--color-light);
+  background-color: var(--color-pressed-state);
+  border-color: var(--color-pressed-state);
+}
+
+.modal-policy-link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-brand);
+  text-decoration-style: ;
+  color: var(--color-primary-brand);
+}
+
+.modal-btn-send-form {
+  padding: 16px 32px;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-primary-brand);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  color: var(--color-white-background);
+  cursor: pointer;
+  transition: background-color var(--primary-transition);
+}
+
+.modal-btn-send-form:hover {
+  background-color: var(--color-pressed-state);
 }
