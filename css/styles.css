@@ -488,6 +488,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: #2e2f4266;
+  transition: opacity var(--primary-transition);
 
   pointer-events: none;
   opacity: 0;
@@ -505,10 +506,13 @@ img {
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
   overflow-y: auto;
-
+  min-height: 584px;
   width: 408px;
-
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--color-modal-background);
+  transition: transform var(--primary-transition);
 }
 
 .modal-btn-close {
@@ -526,7 +530,9 @@ img {
   stroke: var(--color-dark);
   fill: var(--color-dark);
   cursor: pointer;
-  transition: all var(--primary-transition);
+  padding: 0;
+  transition: background-color var(--primary-transition),
+    border var(--primary-transition);
 }
 
 .modal-btn-close:hover,
@@ -534,10 +540,11 @@ img {
   stroke: var(--color-white-background);
   fill: var(--color-white-background);
   background-color: var(--color-pressed-state);
-  border-color: var(--color-pressed-state);
+  border: none;
 }
 
 .modal-btn-close-icon {
+  transition: fill var(--primary-transition);
 }
 
 .modal-text-slogan {
@@ -554,8 +561,10 @@ img {
 }
 
 .modal-form-label {
+  display: block;
+  margin-bottom: 4px;
   font-size: 12px;
-  line-height: 1.1;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
@@ -572,6 +581,7 @@ img {
   outline: transparent;
   padding-left: 38px;
   cursor: pointer;
+  background-color: transparent;
   transition: border-color var(--primary-transition);
 }
 
