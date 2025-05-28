@@ -456,6 +456,7 @@ img {
 .footer-link-wrapper {
   flex-direction: column;
   display: flex;
+  margin-right: 80px;
 }
 
 .footer-wrapper {
@@ -480,6 +481,67 @@ img {
   gap: 16px;
 }
 
+.footer-form-wrapper {
+}
+
+.footer-form-slogan {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--color-white-background);
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-form-label {
+}
+
+.footer-form-input {
+  background-color: transparent;
+  border: 1px solid var(--color-white-background);
+  border-radius: 4px;
+  min-width: 264px;
+  min-height: 40px;
+}
+
+.footer-form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  color: var(--color-white-background);
+}
+
+.footer-form-btn {
+  display: flex;
+
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-white-background);
+  background-color: var(--color-primary-brand);
+  cursor: pointer;
+}
+
+.footer-form-icon {
+  fill: var(--color-white-background);
+}
+
+/* =================MODAL==================== */
 .modal-backdrop {
   position: fixed;
   top: 0;
